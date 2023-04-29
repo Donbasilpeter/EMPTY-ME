@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Donbasilpeter/EMPTY-ME#readme",
   "dependencies": {
     "chalk": "^4.1.2",
-    "commander": "^10.0.1"
+    "commander": "^10.0.1",
+    "del": "^4.1.1"
   }
 }
