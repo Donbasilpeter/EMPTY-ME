@@ -1,5 +1,12 @@
 #! /usr/bin/env node
 
+/**
+ * 
+ * It is a node cli that displays or deletes every file in in a folder
+ *
+ * @author Don Basil Peter <https://donbasilpeter.vercel.app>
+ */
+
 const { program } = require('commander');
 const { listFiles,deleteFiles } = require('../utils/file');
 const packageDetails = require('../package.json');

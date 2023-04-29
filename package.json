@@ -1,6 +1,6 @@
 {
   "name": "empty-me",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "It is a node cli that displays or deletes every file in in a folder",
   "main": "/binindex.js",
   "bin": {

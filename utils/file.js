@@ -3,6 +3,7 @@ const chalk = require("chalk");
 const del = require("del");
 const readline = require('readline');
 
+//function to list all files in the current directory
 function listFiles() {
   const currentDirectory = process.cwd();
   fs.readdir(currentDirectory, (err, files) => {
@@ -30,18 +31,7 @@ function listFiles() {
   });
 }
 
-// function deleteFiles() {
-//   const currentDir = process.cwd();
-
-//   del(currentDir + '/*')
-//     .then(deletedFiles => {
-//       console.log('Deleted files:\n', deletedFiles.join('\n'));
-//     })
-//     .catch(err => {
-//       console.error(err);
-//     });
-// }
-
+//function to delete all the files in the current directory.
 function deleteFiles() {
   const currentDir = process.cwd();
   const rl = readline.createInterface({
