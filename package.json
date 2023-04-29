@@ -1,10 +1,10 @@
 {
   "name": "empty-me",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "It is a node cli that displays or deletes every file in in a folder",
-  "main": "index.js",
+  "main": "/binindex.js",
   "bin": {
-    "empty-me": "index.js"
+    "empty-me": "./bin/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/Donbasilpeter/EMPTY-ME/issues"
   },
-  "homepage": "https://github.com/Donbasilpeter/EMPTY-ME#readme"
+  "homepage": "https://github.com/Donbasilpeter/EMPTY-ME#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^10.0.1",
+    "del": "^4.1.1"
+  }
 }
