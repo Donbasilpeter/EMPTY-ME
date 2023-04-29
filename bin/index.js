@@ -1,8 +1,7 @@
 #! /usr/bin/env node
 
 const { program } = require('commander');
-const chalk = require('chalk');
-const { listFiles } = require('../utils/file');
+const { listFiles,deleteFiles } = require('../utils/file');
 const packageDetails = require('../package.json');
 
 
@@ -14,7 +13,13 @@ program
 
 program
   .command('listfiles')
+  .description('List all files in the current directory')
   .action(listFiles);
+
+program
+  .command('go')
+  .description('Delete all files in the current directory')
+  .action(deleteFiles);
 
 
 program.parse();

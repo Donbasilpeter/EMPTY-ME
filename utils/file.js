@@ -1,5 +1,7 @@
 const fs = require("fs");
 const chalk = require("chalk");
+const del = require("del");
+const readline = require('readline');
 
 function listFiles() {
   const currentDirectory = process.cwd();
@@ -28,6 +30,42 @@ function listFiles() {
   });
 }
 
+// function deleteFiles() {
+//   const currentDir = process.cwd();
+
+//   del(currentDir + '/*')
+//     .then(deletedFiles => {
+//       console.log('Deleted files:\n', deletedFiles.join('\n'));
+//     })
+//     .catch(err => {
+//       console.error(err);
+//     });
+// }
+
+function deleteFiles() {
+  const currentDir = process.cwd();
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  rl.question(chalk.red(`WARNING: This will delete all files in ${currentDir}. Are you sure you want to proceed? (y/N) `), answer => {
+    rl.close();
+    if (answer.toLowerCase() === 'y') {
+      del(currentDir + '/*')
+        .then(deletedFiles => {
+          console.log('Deleted files:\n', deletedFiles.join('\n'));
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    } else {
+      console.log('Operation cancelled.');
+    }
+  });
+}
+
 module.exports = {
   listFiles,
+  deleteFiles,
 };
