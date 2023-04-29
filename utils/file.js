@@ -1,5 +1,5 @@
-const fs = require('fs');
-const chalk = require('chalk');
+const fs = require("fs");
+const chalk = require("chalk");
 
 function listFiles() {
   const currentDirectory = process.cwd();
@@ -8,26 +8,26 @@ function listFiles() {
       console.error("Error getting all files");
       return;
     }
-    console.log(chalk.green('Files in current directory:'));
+    console.log(chalk.green("\n\nFiles in current directory:"));
+    console.log("-".repeat(process.stdout.columns));
     const columnWidth = Math.floor((process.stdout.columns - 4) / 4);
     let fileColumns = [];
-    files.forEach(file => {
+    files.forEach((file) => {
       if (file.length > columnWidth) {
-        file = file.substring(0, columnWidth - 3) + '...';
+        file = file.substring(0, columnWidth - 3) + "...";
       }
       fileColumns.push(chalk.blue(file.padEnd(columnWidth)));
       if (fileColumns.length === 4) {
-        console.log(fileColumns.join('   '));
+        console.log(fileColumns.join("   "));
         fileColumns = [];
       }
     });
     if (fileColumns.length > 0) {
-      console.log(fileColumns.join('   '));
+      console.log(fileColumns.join("   "));
     }
   });
 }
 
-
 module.exports = {
-  listFiles
+  listFiles,
 };
