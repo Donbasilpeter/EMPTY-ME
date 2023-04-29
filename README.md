@@ -36,6 +36,7 @@ The basic features in this CLI is to list and remove all files and folders from 
 ```bash
     empty-me listfiles
 ```
+<img src="doc/listfiles.png" alt="List of files" width="700" height="420">
 
 
 - Format the folder
@@ -43,6 +44,7 @@ The basic features in this CLI is to list and remove all files and folders from 
 ```bash
     empty-me go
 ```
+<img src="doc/go.png" alt="List of files" width="700" height="420">
 
 
 
