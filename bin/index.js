@@ -20,11 +20,13 @@ program
 
 program
   .command('listfiles')
+  .alias('l')
   .description('List all files in the current directory')
   .action(listFiles);
 
 program
-  .command('go')
+  .command('delete')
+  .alias('d')
   .description('Delete all files in the current directory')
   .action(deleteFiles);
 

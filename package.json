@@ -4,7 +4,7 @@
   "description": "It is a node cli that displays or deletes every file in in a folder",
   "main": "/binindex.js",
   "bin": {
-    "empty-me": "./bin/index.js"
+    "f": "./bin/index.js"
   },
   "repository": {
     "type": "git",
