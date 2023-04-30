@@ -21,11 +21,11 @@ npm i -g empty-me
 To test the CLI in your system run the following command
 
 ```bash
-empty-me -V
+f -V
 ```
 You can know more about the CLI by running the following command.
 
-`empty-me` or `empty-me --help` or `empty-me help`
+`f` or `f --help` or `f help`
 
 ## Features
 
@@ -34,17 +34,17 @@ The basic features in this CLI is to list and remove all files and folders from 
 - ### List Files
     to list files of the current directory, run the following command
 ```bash
-    empty-me listfiles
+    f listfiles or f l
 ```
-<img src="doc/listfiles.png" alt="List of files" width="700" height="420">
+<!-- <img src="doc/listfiles.png" alt="List of files" width="700" height="420"> -->
 
 
 - Format the folder
     to Format all files of the current directory, run the following command
 ```bash
-    empty-me go
+    f delete or f d
 ```
-<img src="doc/go.png" alt="List of files" width="700" height="420">
+<!-- <img src="doc/go.png" alt="List of files" width="700" height="420"> -->
 
 
 
